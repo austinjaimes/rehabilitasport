@@ -1,0 +1,31 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NavKrida from "@/components/nav/NavKrida.astro";
+import WhatsappButton from "@/components/whatsapp/WhatsappButton.astro";
+import { BookingWizard } from "@/components/booking/BookingWizard";
+
+const title = "Reservar Cita en Línea | Rehabilita Sport";
+const description = "Agenda tu sesión de fisioterapia, rehabilitación deportiva o consulta médica en línea con Rehabilita Sport en Iguala, Guerrero.";
+---
+
+<BaseLayout title={title} description={description} navStyle="frosted">
+	<NavKrida />
+	<WhatsappButton phone="5215512345678" tooltip="Escríbenos por WhatsApp" />
+
+	<section class="py-12 sm:py-16 bg-gradient-to-b from-blue-50/50 via-white to-gray-50/50 min-h-[85vh]">
+		<div class="max-w-4xl mx-auto px-4 text-center mb-4">
+			<span class="text-xs uppercase font-extrabold tracking-widest text-blue-600 bg-blue-100/70 px-3.5 py-1 rounded-full border border-blue-200">
+				Sistema Oficial de Reservas
+			</span>
+			<h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-3 font-heading tracking-tight">
+				Agenda tu Cita Médica
+			</h1>
+			<p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto mt-2 leading-relaxed">
+				Elige tu tratamiento, selecciona la fecha y hora que mejor se adapte a tu día y asegura tu lugar en minutos.
+			</p>
+		</div>
+
+		<BookingWizard client:load />
+	</section>
+</BaseLayout>
+

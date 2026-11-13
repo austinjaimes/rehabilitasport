@@ -12,12 +12,13 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://rehabilitasport.com",
+	server: {
+		host: "::1",
+		port: 4321,
+	},
 	adapter: netlify({
 		imageCDN: false,
 	}),
-	redirects: {
-		"/admin": "/keystatic",
-	},
 	// i18n configuration must match src/config/translations.json.ts
 	i18n: {
 		defaultLocale: "en",

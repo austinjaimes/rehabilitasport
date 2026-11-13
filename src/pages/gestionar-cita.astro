@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NavKrida from "@/components/nav/NavKrida.astro";
+import WhatsappButton from "@/components/whatsapp/WhatsappButton.astro";
+import { GestionCita } from "@/components/booking/GestionCita";
+
+const title = "Gestionar Mi Cita | Rehabilita Sport";
+const description = "Consulta el estado de tu reservación, reprograma tu horario o cancela tu cita médica en Rehabilita Sport.";
+---
+
+<BaseLayout title={title} description={description} noindex={true} navStyle="frosted">
+	<NavKrida />
+	<WhatsappButton phone="5215512345678" tooltip="Escríbenos por WhatsApp" />
+
+	<section class="py-12 sm:py-16 bg-gradient-to-b from-gray-50/70 via-white to-blue-50/40 min-h-[85vh]">
+		<GestionCita client:only="react" />
+	</section>
+</BaseLayout>
+

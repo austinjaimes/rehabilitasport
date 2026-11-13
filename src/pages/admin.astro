@@ -1,0 +1,12 @@
+---
+import AdminLayout from '@/layouts/AdminLayout.astro';
+import { AdminApp } from '@/components/admin/AdminApp';
+
+const title = "Panel Administrativo | Rehabilita Sport";
+const description = "Acceso seguro a la administración de citas, catálogo de servicios y bloqueos de agenda de Rehabilita Sport.";
+---
+
+<AdminLayout title={title} description={description}>
+  <AdminApp client:only="react" />
+</AdminLayout>
+
