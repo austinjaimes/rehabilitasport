@@ -67,6 +67,7 @@ export default defineConfig([
 	// Ignore patterns
 	{
 		ignores: [
+			"scratch/**",
 			"dist/**",
 			"**/*.d.ts",
 			".tours/",

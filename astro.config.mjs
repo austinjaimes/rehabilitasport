@@ -13,7 +13,7 @@ import icon from "astro-icon";
 export default defineConfig({
 	site: "https://rehabilitasport.com",
 	server: {
-		host: "::1",
+		host: "127.0.0.1",
 		port: 4321,
 	},
 	adapter: netlify({
